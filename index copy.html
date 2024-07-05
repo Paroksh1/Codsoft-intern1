@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">XtremeFitness</div>
+            <div class="nav-toggle" id="nav-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#benefits" onclick="closeMenu()">Benefits</a></li>
+                <li><a href="#planner" onclick="closeMenu()">Workout Planner</a></li>
+                <li><a href="#transformations" onclick="closeMenu()">Transformations</a></li>
+                <li><a href="#fitness-calculator" onclick="closeMenu()">Fitness Calculator</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Welcome to XtremeFitness</h1>
+            <p>Transform your body, mind, and life with us.</p>
+            <a href="#services" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2 data-aos="fade-up">Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="service1.jpg" alt="Personal Training">
+                <h3>Personal Training</h3>
+                <p>Get personalized training sessions tailored to your needs.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="service2.jpg" alt="Group Classes">
+                <h3>Group Classes</h3>
+                <p>Join our group classes and stay motivated with others.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="service3.jpg" alt="Nutrition Plans">
+                <h3>Nutrition Plans</h3>
+                <p>Receive custom nutrition plans to complement your workouts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content" data-aos="fade-right">
+            <img src="about.jpg" alt="About Us">
+        </div>
+        <div class="about-text" data-aos="fade-left">
+            <h2>About Us</h2>
+            <p>At GymName, we are committed to helping you achieve your fitness goals. Our state-of-the-art facility and expert trainers provide the perfect environment for your transformation.</p>
+        </div>
+        <div class="about-video" data-aos="fade-up">
+            <h2>Our Gym in Action</h2>
+            <video class="gym-video" controls>
+                <source src="gym-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section id="benefits" class="benefits">
+        <h2 data-aos="fade-up">Membership Benefits</h2>
+        <div class="benefits-list">
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>Exclusive Equipment</h3>
+                <p>Access to the latest and most advanced fitness equipment.</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Personalized Plans</h3>
+                <p>Custom workout and nutrition plans tailored to your goals.</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                <h3>Community Support</h3>
+                <p>Be a part of a motivating and supportive fitness community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="planner" class="planner">
+        <h2 data-aos="fade-up">Interactive Workout Planner</h2>
+        <div class="planner-content" data-aos="fade-up" data-aos-delay="100">
+            <p>Customize your workout routines and track your progress with our interactive workout planner.</p>
+            <form id="workout-planner-form" class="workout-form">
+                <div class="form-group">
+                    <label for="workout-type">Workout Type:</label>
+                    <select id="workout-type" name="workout-type" required>
+                        <option value="strength">Strength Training</option>
+                        <option value="cardio">Cardio</option>
+                        <option value="flexibility">Flexibility</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="workout-duration">Duration (minutes):</label>
+                    <input type="number" id="workout-duration" name="workout-duration" required>
+                </div>
+                <div class="form-group">
+                    <label for="workout-intensity">Intensity:</label>
+                    <select id="workout-intensity" name="workout-intensity" required>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Plan Workout</button>
+            </form>
+            <div id="workout-plan-display" class="workout-plan-display">
+                <!-- Planned workouts will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="transformations" class="transformations">
+        <h2 data-aos="fade-up">Success Stories</h2>
+        <div class="transformation-stories">
+            <div class="story" data-aos="fade-up" data-aos-delay="100">
+                <div class="before-after">
+                    <img src="before1.jpg" alt="Before" class="before">
+                    <img src="after1.jpg" alt="After" class="after">
+                </div>
+                <p>"Joining XtremeFitness has been the best decision of my life. I've lost 52kg and gained so much confidence!" - Paroksh</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fitness-calculator" class="fitness-calculator">
+        <h2 data-aos="fade-up">Fitness Calculator</h2>
+        <form id="fitness-calculator-form" data-aos="fade-up" data-aos-delay="100">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" required>
+            <label for="height">Height (cm):</label>
+            <input type="number" id="height" name="height" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <button type="submit" class="btn">Calculate BMI</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 data-aos="fade-up">Contact Us</h2>
+        <form id="contact-form" data-aos="fade-up" data-aos-delay="100">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 XtremeFitness. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Go to top">Top</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('nav-links');
+            menu.classList.toggle('active');
+        });
+
+        function closeMenu() {
+            const menu = document.getElementById('nav-links');
+            menu.classList.remove('active');
+        }
+
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("back-to-top").style.display = "block";
+            } else {
+                document.getElementById("back-to-top").style.display = "none";
+            }
+        }
+        
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+        
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            
+            if(name === '' || email === '' || message === '') {
+                alert('Please fill all fields');
+            } else if(!validateEmail(email)) {
+                alert('Please enter a valid email');
+            } else {
+                alert('Thank you for your message!');
+            }
+        });
+
+        function validateEmail(email) {
+            var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(email);
+        }
+
+        document.getElementById('fitness-calculator-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            var age = document.getElementById('age').value;
+            var bmi = calculateBMI(weight, height);
+            alert('Your BMI is: ' + bmi);
+        });
+
+        function calculateBMI(weight, height) {
+            height = height / 100; // convert height to meters
+            var bmi = weight / (height * height);
+            return bmi.toFixed(2);
+        }
+
+        document.getElementById('workout-planner-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var workoutType = document.getElementById('workout-type').value;
+            var workoutDuration = document.getElementById('workout-duration').value;
+            var workoutIntensity = document.getElementById('workout-intensity').value;
+            var workoutPlanDisplay = document.getElementById('workout-plan-display');
+            var workoutPlan = `
+                <div class="workout-plan">
+                    <p>Workout Type: ${workoutType}</p>
+                    <p>Duration: ${workoutDuration} minutes</p>
+                    <p>Intensity: ${workoutIntensity}</p>
+                </div>
+            `;
+            workoutPlanDisplay.innerHTML = workoutPlan;
+        });
+    </script>
+</body>
+</html>
